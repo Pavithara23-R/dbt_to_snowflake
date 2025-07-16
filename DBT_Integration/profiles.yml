@@ -1,0 +1,11 @@
+DBT_Integration:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      role: ACCOUNTADMIN
+      warehouse: COMPUTE_WH
+      database: dbt_db
+      schema: dbt_SC
+      account: 'EYPPJVA-SYB12801'
+      user: 'Thara'

@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_customers
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+      - name: email
+        tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              expression: "email LIKE '%@%'"
